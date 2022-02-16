@@ -1,0 +1,82 @@
+.hero {
+    
+    background-image: linear-gradient(
+      to bottom,
+      var(--color-grey-900),
+      var(--color-grey-800)
+    );
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-shadow: 0 .25rem 1rem rgba(0, 0, 0, 0.5);
+    border-radius: 3.5em;
+    border: 1px solid black;
+    margin: 2em;
+}
+  
+.image {
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    justify-content: flex-start;
+    background-color: var(--color-grey-700);
+    margin: 15px;
+    
+}
+  
+.image img {
+    object-fit: cover;
+    justify-content: flex-start;
+}
+  
+.hero h1 {
+    font-size: var(--size-16);
+    margin: var(--size-4) 0;
+    color: var(--color-grey-300);
+}
+  
+.hero p {
+    font-size: var(--size-6);
+    color: var(--color-grey-200);
+    width: 30%;
+    max-width: 40rem;
+    margin: auto;
+}
+
+.hero ul {  
+     width: auto; 
+     display: flex;
+     color: #FFF;
+     padding-top: 0%;
+     height: auto;
+     margin-top: 0;
+     margin-bottom: 0;
+     margin-right: 1em;
+}
+
+.hero li {
+    padding: 3.3rem 20px 20px 20px;
+    list-style-type: none;
+    height: 100%;
+    border-radius: 4em;
+    
+}
+
+
+.hero li:hover {
+    background-color: white;
+    border: 3px solid black;
+    
+    border-radius: 4em;
+    
+}
+
+.hero a {
+    color: lightgrey;
+}
+
+.hero a:hover {
+    color: black;
+}
