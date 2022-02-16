@@ -18,7 +18,7 @@ export default function Hero() {
                 <li><a href="#">Home</a> </li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>
-                <li><a href="#">All Posts</a></li>
+                <li><a href="/posts">All Posts</a></li>
             </ul>
         </section>
     )

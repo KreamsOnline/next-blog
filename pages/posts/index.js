@@ -37,7 +37,6 @@ const DummyData = [
 export default function AllPostsPage() {
     return (
         <Fragment>
-            <Hero />
             <AllPosts posts={DummyData} />
         </Fragment>
     )

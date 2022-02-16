@@ -1,11 +1,11 @@
 import Image from "next/image";
-import classes from './post-content.module.css;'
+import classes from './post-header.module.css'
 
 export default function PostHeader(props) {
     const { title, image } = props;
 
     return (
-        <header>
+        <header className={classes.header}>
             <h1>{title}</h1>
             <Image 
                 src={image} 
