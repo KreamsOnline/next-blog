@@ -12,6 +12,7 @@ export default function PostItem(props) {
     });
 
     const imagePath = `/images/posts/${slug}/${image}`;
+    console.log(imagePath);
     const linkPath = `/posts/${slug}`;
 
     return (

@@ -10,8 +10,8 @@ export default function PostHeader(props) {
             <Image 
                 src={image} 
                 alt={title} 
-                width={200}
-                height={150}
+                width={300}
+                height={200}
             />
         </header>
     )

@@ -1,6 +1,7 @@
 import { Fragment } from 'react';
 import FeaturedPosts from '../components/home-page/featured-posts';
 import Hero from '../components/home-page/hero';
+import { getFeaturedPosts } from '../lib/posts-util';
 
 const DummyData = [
   {
@@ -33,15 +34,23 @@ const DummyData = [
   }
 ];
 
-export default function Home() {
+export default function Home(props) {
   return (
       <Fragment>
-        <FeaturedPosts posts={DummyData} />
+        <FeaturedPosts posts={props.posts} />
       </Fragment>
   )
 }
 
+export function getStaticProps() {
+  const featuredPosts = getFeaturedPosts();
 
+  return {
+    props: {
+      posts: featuredPosts
+    }
+  }
+}
 
 //  1)  Hero Section - 
 //  2)  Featured Posts

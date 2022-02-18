@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import Hero from "../../components/home-page/hero";
 import AllPosts from "../../components/posts/all-posts";
+import { getAllPosts } from "../../lib/posts-util";
 
 const DummyData = [
     {
@@ -34,10 +35,20 @@ const DummyData = [
 ];
 
 
-export default function AllPostsPage() {
+export default function AllPostsPage(props) {
     return (
         <Fragment>
-            <AllPosts posts={DummyData} />
+            <AllPosts posts={props.posts} />
         </Fragment>
     )
 };
+
+export function getStaticProps() {
+    const getPosts = getAllPosts();
+  
+    return {
+      props: {
+        posts: getPosts
+      }
+    }
+  }
