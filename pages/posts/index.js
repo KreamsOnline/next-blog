@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { Fragment } from "react";
 import Hero from "../../components/home-page/hero";
 import AllPosts from "../../components/posts/all-posts";
@@ -38,6 +39,13 @@ const DummyData = [
 export default function AllPostsPage(props) {
     return (
         <Fragment>
+            <Head>
+                <title>All My Posts</title>
+                <meta 
+                    name='description' 
+                    content="All of my technology related posts" 
+                />
+            </Head>
             <AllPosts posts={props.posts} />
         </Fragment>
     )
