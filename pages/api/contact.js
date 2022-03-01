@@ -26,7 +26,7 @@ export default async function handler(req, res) {
 
     let client;
 
-    const connectionString = `mongodb+srv://${process.env.mongodb_username}:${process.env.mongodb_password}@${process.env.mongodb_clustername}.a0cxy.mongodb.net/${process.env.mongodb_database}?retryWrites=true&w=majority`
+    const connectionString = `mongodb+srv://${process.env.mongodb_username}:${process.env.mongodb_password}@${process.env.mongodb_clustername}.a0cxy.mongodb.net/${process.env.mongodb_database}?retryWrites=true&w=majory`
     console.log(connectionString);
 
     try {
@@ -42,7 +42,7 @@ export default async function handler(req, res) {
       const result = await db.collection('messages').insertOne(newMessage);
       newMessage.id = result.insertedId;
     } catch (error) {
-      res.status(500).json({message: 'Storing message failed', message: newMessage});
+      res.status(500).json({message: 'Storing message failed', message: error});
       return;
     }
 
